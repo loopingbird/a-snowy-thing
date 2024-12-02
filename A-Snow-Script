@@ -59,7 +59,7 @@ MoneyTab:AddToggle({
 	Name = "This is a toggle!",
 	Default = false,
 	Callback = function(Value)
-		_G.AutoSnow == Value
+		_G.AutoSnow = Value
 	end    
 })
 ---ToggleButton
