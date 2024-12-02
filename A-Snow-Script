@@ -5,13 +5,13 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 
----Tab
+---Window
 MoneyTab = Window:MakeTab({
 	Name = "Tab 1",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
----Tab
+---Window
 
 local Section = MoneyTab:AddSection({
 	Name = "Section"
