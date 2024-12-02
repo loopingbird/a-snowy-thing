@@ -56,10 +56,11 @@ MoneyTab:AddButton({
 })
 ---ToggleButton
 MoneyTab:AddToggle({
-	Name = "This is a toggle!",
+	Name = "UhYes",
 	Default = false,
 	Callback = function(Value)
-		_G.AutoSnow = Value
+		_G.AutoSnow == Value
+        AutoSnow()
 	end    
 })
 ---ToggleButton
@@ -67,5 +68,5 @@ MoneyTab:AddToggle({
 --- Button
 
 
-
+end
 OrionLib:Init()
