@@ -1,4 +1,4 @@
-local Players = game:GetService("Players")
+local player = game.Players.LocalPlayer
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
