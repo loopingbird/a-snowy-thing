@@ -5,14 +5,14 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 ---Tab
-local Tab = Window:MakeTab({
+MoneyTab = Window:MakeTab({
 	Name = "Tab 1",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 ---Tab
 
-local Section = Tab:AddSection({
+local Section = MoneyTab:AddSection({
 	Name = "Section"
 })
 
@@ -23,10 +23,14 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-Tab:AddButton({
+MoneyTab:AddButton({
 	Name = "Button!",
 	Callback = function()
-      		print("button pressed")
+        local args = {
+            [1] = 15000
+        }
+        
+        game:GetService("ReplicatedStorage").ServerEvents.treasureChestCollection:FireServer(unpack(args))
   	end    
 })
 
