@@ -5,12 +5,12 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 ---Values
-_G.AutoSnow = true
+_G.Autosnow = true
 
 ---Functions                                                
 
 function AutoSnow()
-while _G.AutoSnow == true do
+while _G.Autosnow == true do
     local args = {
         [1] = workspace.HitParts.Snow1,
         [2] = "Snow1",
@@ -59,7 +59,7 @@ MoneyTab:AddToggle({
 	Name = "UhYes",
 	Default = false,
 	Callback = function(Value)
-		_G.AutoSnow == Value
+		_G.Autosnow == Value
         AutoSnow()
 	end    
 })
