@@ -4,6 +4,25 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+---Values
+_G.AutoSnow = true
+
+---Functions                                                
+
+function AutoSnow()
+while _G.AutoSnow == true do
+    local args = {
+        [1] = workspace.HitParts.Snow1,
+        [2] = "Snow1",
+        [3] = "Stick"
+    }
+    
+        game:GetService("ReplicatedStorage").Events.e8eGb8RgRXFcug8q:FireServer(unpack(args))
+        wait(.0001)
+    end
+end
+---
+
 ---Tab
 MoneyTab = Window:MakeTab({
 	Name = "Tab 1",
@@ -22,18 +41,30 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+---Tab
 
+---Button
 MoneyTab:AddButton({
 	Name = "Button!",
 	Callback = function()
         local args = {
-            [1] = 15000
+            [1] = 999999999999999999999
         }
         
         game:GetService("ReplicatedStorage").ServerEvents.treasureChestCollection:FireServer(unpack(args))
   	end    
 })
+---ToggleButton
+MoneyTab:AddToggle({
+	Name = "This is a toggle!",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoSnow == Value
+	end    
+})
+---ToggleButton
 
+--- Button
 
 
 
