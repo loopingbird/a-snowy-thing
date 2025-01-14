@@ -7,7 +7,7 @@ local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium =
 
 ---Window
 MoneyTab = Window:MakeTab({
-	Name = "Tab 1",
+	Name = "Sigma tab",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
